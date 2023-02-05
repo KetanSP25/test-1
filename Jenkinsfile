@@ -8,6 +8,7 @@ pipeline{
 		stages{
 			stage('ketan dir'){
 					steps{
+						sh "rm -rf ketan"
 						sh "mkdir ketan"
 					}
 			
