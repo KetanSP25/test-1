@@ -21,7 +21,7 @@ pipeline{
 								}
 						}
 					steps{
-						sh "git clone https://github.com/KetanSP25/test-1.git -b dev"
+						sh "sudo git clone https://github.com/KetanSP25/test-1.git -b dev"
 					}
 			
 			}
