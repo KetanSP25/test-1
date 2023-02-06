@@ -2,7 +2,7 @@ pipeline{
 		agent{
 				label{
 						label 'built-in'
-						customWorkspace '/mnt/project'
+						customWorkspace '/mnt/project-repo'
 				}
 		}
 		stages{
@@ -17,11 +17,11 @@ pipeline{
 					agent{
 							label{
 									label 'qa'
-									customWorkspace '/mnt/project'
+									customWorkspace '/mnt/project-repo'
 								}
 						}
 					steps{
-						sh "sudo git clone https://github.com/KetanSP25/test-1.git -b dev"
+						sh "git clone https://github.com/KetanSP25/test-1.git -b dev"
 					}
 			
 			}
