@@ -6,14 +6,14 @@ pipeline{
 				}
 		}
 		stages{
-			stage('ketan dir'){
+			stage('clone master'){
 					steps{
-						sh "rm -rf ketan"
-						sh "mkdir ketan"
+						sh "rm -rf *"
+						sh "git clone https://github.com/KetanSP25/test-1.git -b master"
 					}
 			
 			}
-			stage('ketan dir in slave'){
+			stage('clone dev'){
 					agent{
 							label{
 									label 'qa'
@@ -21,8 +21,7 @@ pipeline{
 								}
 						}
 					steps{
-						sh "rm -rf ketan"
-						sh "mkdir ketan"
+						sh "git clone https://github.com/KetanSP25/test-1.git -b dev"
 					}
 			
 			}
