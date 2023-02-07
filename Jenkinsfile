@@ -17,7 +17,7 @@ pipeline{
 					agent{
 							label{
 									label 'qa'
-									customWorkspace '/mnt/project/project-repo'
+									customWorkspace '/mnt/project-repo'
 								}
 						}
 					steps{
